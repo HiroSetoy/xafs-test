@@ -153,6 +153,12 @@ h2 {
     margin: 0 0 14px;
 }
 
+/* 測定事例のサムネイル画像 */
+.case-thumbnail {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+}
 
 /* ビームライン情報 */
 .beam-grid {
