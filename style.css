@@ -1,6 +1,6 @@
-// SAGA-LS XAFS Portal Ver. 0.1.1 共通スタイルシート //
+/* SAGA-LS XAFS Portal Ver. 0.1.1 共通スタイルシート */
 
-// 基本配色・ページ幅 //
+/* 基本配色・ページ幅 */
 :root {
     --primary: #174c76;
     --accent: #347eac;
@@ -19,7 +19,7 @@ html {
 }
 
 
-// 基本表示 //
+/* 基本表示 */
 body {
     margin: 0;
     background: #fff;
@@ -44,14 +44,14 @@ a:focus-visible {
 }
 
 
-// 共通レイアウト //
+/* 共通レイアウト */
 .container {
     width: min(var(--max-width), calc(100% - 48px));
     margin-inline: auto;
 }
 
 
-// ヘッダー //
+/* ヘッダー */
 .header-inner {
     display: flex;
     align-items: center;
@@ -77,7 +77,7 @@ a:focus-visible {
 }
 
 
-// ナビゲーション //
+/* ナビゲーション */
 .navigation {
     background: var(--primary);
     color: white;
@@ -106,7 +106,7 @@ a:focus-visible {
 }
 
 
-// 試作表示・メインビジュアル //
+/* 試作表示・メインビジュアル */
 .prototype {
     color: var(--muted);
     font-size: .8rem;
@@ -154,7 +154,7 @@ h2 {
 }
 
 
-// ビームライン情報 //
+/* ビームライン情報 */
 .beam-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -187,7 +187,7 @@ h2 {
 }
 
 
-// 実験技術情報 //
+/* 実験技術情報 */
 .technical-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -204,14 +204,14 @@ h2 {
 }
 
 
-// 新着情報 //
+/* 新着情報 */
 .news-item {
     border-top: 1px solid var(--border);
     padding: 14px 0;
 }
 
 
-// フッター //
+/* フッター */
 .site-footer {
     background: var(--primary);
     color: white;
@@ -230,7 +230,7 @@ h2 {
 }
 
 
-// スマートフォン向け表示 //
+/* スマートフォン向け表示 */
 @media (max-width: 640px) {
     .container {
         width: calc(100% - 28px);
