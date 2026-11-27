@@ -1,4 +1,4 @@
-/* SAGA-LS XAFS Portal Ver. 0.2.1 共通スタイルシート */
+/* SAGA-LS XAFS Portal Ver. 0.2.2 共通スタイルシート */
 
 /* 基本配色・ページ幅 */
 :root {
@@ -153,15 +153,6 @@ h2 {
     margin: 0 0 14px;
 }
 
-/* 測定事例のサムネイル画像 */
-.case-thumbnail {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    height: auto;
-    object-fit: contain;
-    background: white;
-}
 
 /* ビームライン情報 */
 .beam-grid {
@@ -279,6 +270,12 @@ h2 {
     gap: 18px;
 }
 
+/* 測定事例はPCで3列表示（分析目的は2列のまま） */
+.case-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
 .purpose-grid a, .case-card {
     border: 1px solid var(--border);
     border-radius: 4px;
@@ -290,9 +287,22 @@ h2 {
     font-weight: 600;
 }
 
+/* カード内のリンク位置をそろえる */
+.case-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.case-card > a:last-child {
+    margin-top: auto;
+}
+
+/* 画像の縦横比を維持し、共通の表示枠に収める */
 .case-card img {
     display: block;
     width: 100%;
+    height: auto;
     aspect-ratio: 16 / 10;
     object-fit: contain;
     background: white;
@@ -348,8 +358,50 @@ h2 {
     border-top: 1px solid var(--border);
 }
 
+/* 測定事例一覧への誘導リンク */
+.more-link {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.more-link a {
+    display: inline-block;
+    padding: 12px 32px;
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    color: var(--primary);
+}
+
+.more-link a:hover {
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+}
+
+.cases-page {
+    padding-bottom: 24px;
+}
+
+/* 海苔の比較写真は過度に拡大しない */
+.nori-sample {
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+@media (max-width: 900px) {
+    .case-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 @media (max-width: 640px) {
-    .purpose-grid, .case-grid {
+    .purpose-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .case-grid {
         grid-template-columns: 1fr;
     }
 }

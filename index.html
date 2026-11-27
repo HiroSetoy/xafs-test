@@ -24,7 +24,7 @@
         <div class="container nav-inner">
             <a href="index.html" aria-current="page">HOME</a>
             <a href="#purposes">分析目的</a>
-            <a href="#cases">測定事例</a>
+            <a href="cases/index.html">測定事例</a>
             <a href="#beamlines">BL情報</a>
             <a href="#technical">実験技術情報</a>
             <a href="publications/index.html">文献情報</a>
@@ -34,7 +34,7 @@
 
     <!-- メインコンテンツ -->
     <main class="container">
-        <p class="prototype">試作サイト（正式公開前）｜ Ver. 0.2.1</p>
+        <p class="prototype">試作サイト（正式公開前）｜ Ver. 0.2.2</p>
 
         <!-- メインビジュアル -->
         <section class="hero">
@@ -75,7 +75,7 @@
             <div class="case-grid">
                 <article class="case-card">
                     <a href="cases/cu-valence.html">
-                        <img class="case-thumbnail" src="images/cu-valence.png" alt="Cu K端XANESと価数の関係">
+                        <img src="images/cu-valence.png" alt="Cu K端XANESと価数の関係">
                         <h3>銅（Cu）の価数を調べる</h3>
                     </a>
                     <p>Cu、Cu₂O、CuOのXANESスペクトルを比較した測定事例。</p>
@@ -84,17 +84,27 @@
                 </article>
                 <article class="case-card">
                     <a href="cases/nio-reduction.html">
-   　　　　　　　　　 <img class="case-thumbnail"
-        　　　　　　　 src="images/nio-reduction.png"
-        　　　　　　　 alt="NiO還元実験の装置と測定結果">
-   　　　　　　　 <h3>金属酸化物の還元過程を調べる</h3>
-　　　　　　　　　　　</a>
+                        <img src="images/nio-reduction.png" alt="NiO還元実験の装置と測定結果">
+                        <h3>金属酸化物の還元過程を調べる</h3>
+                    </a>
                     <p>加熱・還元に伴うNiの化学状態と局所構造の変化を追跡した事例。</p>
                     <p class="tags">反応過程 ｜ 局所構造 ｜ in situ測定</p>
                     <a href="cases/nio-reduction.html">測定事例の詳細を見る ›</a>
                 </article>
+                <article class="case-card">
+                    <a href="cases/nori.html">
+                        <img src="images/nori-thumbnail.png" alt="品質の異なる有明海産海苔の比較写真">
+                        <h3>海苔の品質と含有元素の関係を調べる</h3>
+                    </a>
+                    <p>有明海産海苔に含まれる鉄や亜鉛のXANES測定事例。</p>
+                    <p class="tags">食品・農水産物 ｜ 元素分析 ｜ XANES</p>
+                    <a href="cases/nori.html">測定事例の詳細を見る ›</a>
+                </article>
             </div>
-            <p class="figure-note">食品・農水産物などの測定事例は今後追加予定です。</p>
+            <!-- 測定事例一覧ページへのリンク -->
+            <div class="more-link">
+                <a href="cases/index.html">さらに測定事例を見る ›</a>
+            </div>
         </section>
 
         <!-- ビームライン情報 -->
@@ -136,6 +146,7 @@
         <!-- 新着情報 -->
         <section id="news">
             <h2>News &amp; Updates</h2>
+            <div class="news-item">海苔の測定事例・測定事例一覧ページの追加（Ver. 0.2.2）</div>
             <div class="news-item">測定事例の出典整備・文献情報ページの追加（Ver. 0.2.1）
             </div>
             <div class="news-item">測定事例2件の追加（Ver. 0.2）</div>
