@@ -2,34 +2,111 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <title>SAGA-LS XAFS Portal（試作版）</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- ヘッダー：施設名、サイト名、公式HPへのリンク -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div>
+                <p class="institution">九州シンクロトロン光研究センター</p>
+                <a class="brand" href="index.html">SAGA-LS XAFS Portal</a>
+            </div>
+            <a class="official" href="https://www.saga-ls.jp/">施設公式HP ↗</a>
+        </div>
+    </header>
 
-    <h1>SAGA-LS XAFS Portal</h1>
-    <p>九州シンクロトロン光研究センター</p>
+    <!-- 共通ナビゲーション：未作成ページはリンクなし -->
+    <nav class="navigation" aria-label="メインメニュー">
+        <div class="container nav-inner">
+            <a href="index.html" aria-current="page">HOME</a>
+            <span>XAFSとは</span>
+            <a href="#beamlines">BL情報</a>
+            <a href="#technical">実験技術情報</a>
+            <span>利用事例</span>
+            <a href="https://www.saga-ls.jp/">利用案内 ↗</a>
+        </div>
+    </nav>
 
-    <hr>
+    <!-- メインコンテンツ -->
+    <main class="container">
+        <p class="prototype">試作サイト（正式公開前）｜ Ver. 0.1.1</p>
 
-    <h2>XAFSポータルサイト</h2>
-    <p>現在、ポータルサイトの構築を試行しています。</p>
+        <!-- メインビジュアル -->
+        <section class="hero">
+            <h1>XAFS at SAGA Light Source</h1>
+            <p>SAGA-LSにおけるXAFS測定に関する情報を提供します。</p>
 
-    <h2>ビームライン</h2>
-    <ul>
-        <li>BL11：テンダー・硬X線XAFS</li>
-        <li>BL07：高エネルギーXAFS</li>
-    </ul>
+            <!-- SVGによるXAFSスペクトルの模式図 -->
+            <svg viewBox="0 0 900 135" role="img" aria-label="XAFSスペクトルの模式図">
+                <g stroke="#d5e1eb" stroke-width="1">
+                    <path d="M0 30H900 M0 65H900 M0 100H900"/>
+                </g>
+                <path d="M0 119 L100 118 L155 116 Q185 115 205 107
+                         Q220 100 235 35 Q245 0 260 35 Q280 93 305 63
+                         Q330 34 355 70 Q380 92 405 62 Q430 43 455 70
+                         Q480 88 505 66 Q530 52 555 72 Q580 83 605 68
+                         Q630 57 655 73 Q680 82 705 70 Q730 62 755 74
+                         Q780 80 805 71 Q830 66 855 74 L900 73"
+                      fill="none" stroke="#347eac" stroke-width="3"
+                      stroke-linejoin="round"/>
+            </svg>
+            <p class="figure-note">XAFSスペクトル模式図（実測データではありません）</p>
+        </section>
 
-    <p>
-        <a href="https://www.saga-ls.jp/">
-            佐賀県立九州シンクロトロン光研究センター公式HP
-        </a>
-    </p>
+        <!-- ビームライン情報 -->
+        <section id="beamlines">
+            <h2>ビームライン情報</h2>
+            <div class="beam-grid">
+                <!-- BL11 -->
+                <article class="beam-card">
+                    <h3>BL11</h3>
+                    <p class="beam-type">テンダー・硬X線XAFS</p>
+                    <p>リン・硫黄などの軽元素から遷移金属まで</p>
+                    <span class="pending">詳細情報（準備中）</span>
+                </article>
 
-    <hr>
-    <p>試作サイト（正式公開前）</p>
+                <!-- BL07 -->
+                <article class="beam-card">
+                    <h3>BL07</h3>
+                    <p class="beam-type">高エネルギーXAFS</p>
+                    <p>高エネルギー領域の吸収端を対象とした測定</p>
+                    <span class="pending">詳細情報（準備中）</span>
+                </article>
+            </div>
+        </section>
 
+        <!-- 実験技術情報 -->
+        <section id="technical">
+            <h2>実験技術情報</h2>
+            <div class="technical-grid">
+                <div>測定可能元素</div>
+                <div>試料調製</div>
+                <div>測定手法</div>
+                <div>マニュアル</div>
+                <div>解析ソフト</div>
+                <div>FAQ</div>
+            </div>
+            <p class="figure-note">各項目の詳細ページは準備中です。</p>
+        </section>
+
+        <!-- 新着情報 -->
+        <section id="news">
+            <h2>News &amp; Updates</h2>
+            <div class="news-item">ポータルサイト試作版の公開</div>
+        </section>
+    </main>
+
+    <!-- 共通フッター -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>Kyushu Synchrotron Light Research Center</p>
+            <p>SAGA Light Source ｜ XAFS Portal（試作版）</p>
+            <a href="https://www.saga-ls.jp/">施設公式HP</a>
+        </div>
+    </footer>
 </body>
 </html>
