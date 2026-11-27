@@ -23,22 +23,23 @@
     <nav class="navigation" aria-label="メインメニュー">
         <div class="container nav-inner">
             <a href="index.html" aria-current="page">HOME</a>
-            <span>XAFSとは</span>
+            <a href="#purposes">分析目的</a>
+            <a href="#cases">測定事例</a>
             <a href="#beamlines">BL情報</a>
             <a href="#technical">実験技術情報</a>
-            <span>利用事例</span>
+            <a href="publications/index.html">文献情報</a>
             <a href="https://www.saga-ls.jp/">利用案内 ↗</a>
         </div>
     </nav>
 
     <!-- メインコンテンツ -->
     <main class="container">
-        <p class="prototype">試作サイト（正式公開前）｜ Ver. 0.1.1</p>
+        <p class="prototype">試作サイト（正式公開前）｜ Ver. 0.2.1</p>
 
         <!-- メインビジュアル -->
         <section class="hero">
             <h1>XAFS at SAGA Light Source</h1>
-            <p>SAGA-LSにおけるXAFS測定に関する情報を提供します。</p>
+            <p>元素の価数・化学状態・局所構造を調べる放射光分析技術を紹介します。</p>
 
             <!-- SVGによるXAFSスペクトルの模式図 -->
             <svg viewBox="0 0 900 135" role="img" aria-label="XAFSスペクトルの模式図">
@@ -55,6 +56,43 @@
                       stroke-linejoin="round"/>
             </svg>
             <p class="figure-note">XAFSスペクトル模式図（実測データではありません）</p>
+        </section>
+
+        <!-- 分析目的別の入口：現段階では関連する測定事例へ案内 -->
+        <section id="purposes">
+            <h2>どのようなことを調べたいですか？</h2>
+            <div class="purpose-grid">
+                <a href="cases/cu-valence.html">元素の価数を調べたい</a>
+                <a href="cases/cu-valence.html">元素の化学状態を知りたい</a>
+                <a href="cases/nio-reduction.html">原子周囲の局所構造を知りたい</a>
+                <a href="cases/nio-reduction.html">反応中の変化を調べたい</a>
+            </div>
+        </section>
+
+        <!-- 測定事例：実測データを用いた紹介 -->
+        <section id="cases">
+            <h2>測定事例</h2>
+            <div class="case-grid">
+                <article class="case-card">
+                    <a href="cases/cu-valence.html">
+                        <img src="images/cu-valence.png" alt="Cu K端XANESと価数の関係">
+                        <h3>銅（Cu）の価数を調べる</h3>
+                    </a>
+                    <p>Cu、Cu₂O、CuOのXANESスペクトルを比較した測定事例。</p>
+                    <p class="tags">価数評価 ｜ 化学状態 ｜ XANES</p>
+                    <a href="cases/cu-valence.html">測定事例の詳細を見る ›</a>
+                </article>
+                <article class="case-card">
+                    <a href="cases/nio-reduction.html">
+                        <img src="images/nio-reduction.png" alt="NiO還元実験の装置と測定結果">
+                        <h3>金属酸化物の還元過程を調べる</h3>
+                    </a>
+                    <p>加熱・還元に伴うNiの化学状態と局所構造の変化を追跡した事例。</p>
+                    <p class="tags">反応過程 ｜ 局所構造 ｜ in situ測定</p>
+                    <a href="cases/nio-reduction.html">測定事例の詳細を見る ›</a>
+                </article>
+            </div>
+            <p class="figure-note">食品・農水産物などの測定事例は今後追加予定です。</p>
         </section>
 
         <!-- ビームライン情報 -->
@@ -96,7 +134,9 @@
         <!-- 新着情報 -->
         <section id="news">
             <h2>News &amp; Updates</h2>
-            <div class="news-item">ポータルサイト試作版の公開</div>
+            <div class="news-item">測定事例の出典整備・文献情報ページの追加（Ver. 0.2.1）
+            </div>
+            <div class="news-item">測定事例2件の追加（Ver. 0.2）</div>
         </section>
     </main>
 

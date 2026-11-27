@@ -1,8 +1,8 @@
-/* SAGA-LS XAFS Portal Ver. 0.1.1 共通スタイルシート */
+/* SAGA-LS XAFS Portal Ver. 0.2.1 共通スタイルシート */
 
 /* 基本配色・ページ幅 */
 :root {
-    --primary: #286c60;
+    --primary: #174c76;
     --accent: #347eac;
     --pale: #edf3f8;
     --border: #cbd7df;
@@ -261,4 +261,124 @@ h2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+}
+
+/* 分析目的・測定事例のカード */
+.purpose-grid, .case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.purpose-grid a, .case-card {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px;
+}
+
+.purpose-grid a {
+    background: var(--pale);
+    font-weight: 600;
+}
+
+.case-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    background: white;
+}
+
+.case-card h3 {
+    color: var(--primary);
+    margin: 12px 0 0;
+}
+
+.tags, .breadcrumb, figcaption {
+    color: var(--muted);
+    font-size: .85rem;
+}
+
+/* 測定事例の詳細ページ */
+.case-page article {
+    max-width: 900px;
+    margin: 0 auto 32px;
+}
+
+.case-page h2 {
+    margin-top: 28px;
+}
+
+.case-figure {
+    margin: 24px 0;
+}
+
+.case-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+}
+
+.conditions {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.conditions th, .conditions td {
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.conditions th {
+    background: var(--pale);
+}
+
+.related {
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+    .purpose-grid, .case-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* 図の出典・文献情報 */
+.case-figure figcaption {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.case-figure figcaption a {
+    text-decoration: underline;
+}
+
+.publications-page {
+    padding-bottom: 24px;
+}
+
+.publication {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.publication h2 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.publication h3 {
+    color: var(--primary);
+    font-size: 1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+}
+
+.publication .doi {
+    overflow-wrap: anywhere;
 }
